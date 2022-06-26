@@ -18,21 +18,21 @@ model Checkin {
 
 model Venue {
   id String @id
+  name String
   location_id Int
   checkin Checkin[]
-  location Location[]
+  location Location @relation(fields: [location_id], references: [id])
 }
 
 model Location {
-  id Int @id
-  venue_id String
+  id Int @id @default(autoincrement())
   address String
   city String
   state String
   country String
   lat BigInt
   lng BigInt
-  venue Venue @relation(fields: [venue_id], references: [id])
+  venue Venue[]
 }
 
 model Category {
