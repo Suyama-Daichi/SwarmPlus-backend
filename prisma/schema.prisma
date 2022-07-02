@@ -49,7 +49,7 @@ model Category {
   icon String
 }
 
-model View_Category {
+model Venue_Category {
   venue_id String
   category_id String
   @@id([venue_id, category_id])
