@@ -37,3 +37,4 @@ lerna-debug.log*
 .yarn/install-state.gz
 serviceAccountDevelop.json
 .env
+.yarnrc.yml
