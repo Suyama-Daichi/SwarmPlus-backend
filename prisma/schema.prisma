@@ -7,13 +7,21 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model User {
+  id String @id
+  checkin Checkin[]
+}
+
 model Checkin {
   id String @id
   venue_id String
+  user_id String
   venue Venue  @relation(fields: [venue_id], references: [id], onDelete: Cascade, onUpdate: Cascade )
   shout String
   is_mayor Boolean
   created_at DateTime
+  user User @relation(fields: [user_id], references: [id], onDelete: Cascade, onUpdate: Cascade)
+
 }
 
 model Venue {
