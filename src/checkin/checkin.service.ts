@@ -11,6 +11,7 @@ export class CheckinService {
     const mapAsync = checkin.items.map(async (checkin) => {
       const { venue } = checkin
       const { location } = venue
+      const categories = venue.categories
 
       const checkinTran = this.prismaService.checkin.upsert({
         where: { id: checkin.id },
@@ -31,6 +32,16 @@ export class CheckinService {
                 country: location.country,
                 lat: location.lat,
                 lng: location.lng,
+                categories: {
+                  connectOrCreate: {
+                    where: { id: categories[0].id },
+                    create: {
+                      id: categories[0].id,
+                      name: categories[0].name,
+                      icon: categories[0].icon.prefix + '44' + categories[0].icon.suffix,
+                    },
+                  },
+                },
               },
             },
           },
@@ -53,6 +64,16 @@ export class CheckinService {
                 country: location.country,
                 lat: location.lat,
                 lng: location.lng,
+                categories: {
+                  connectOrCreate: {
+                    where: { id: categories[0].id },
+                    create: {
+                      id: categories[0].id,
+                      name: categories[0].name,
+                      icon: categories[0].icon.prefix + '44' + categories[0].icon.suffix,
+                    },
+                  },
+                },
               },
             },
           },
