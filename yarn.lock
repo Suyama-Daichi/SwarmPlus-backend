@@ -1344,10 +1344,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@suyama-daichi/fouresquare-types@npm:^0.0.2":
-  version: 0.0.2
-  resolution: "@suyama-daichi/fouresquare-types@npm:0.0.2::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40suyama-daichi%2Ffouresquare-types%2F0.0.2%2F39029612d5ec8a3c0d592f41a36ca740cbf395d263f8ce4d22dfe5f1659f4b5e"
-  checksum: c0aa2a13d31aa6fccb30e9f98026300027ca89dd7b5eacfaa70b796bbc4f7e3cf6d2b55a258e75c8274f0dcc9aa5ac2a0972a24aafd1ba762be7b9fd093b1356
+"@suyama-daichi/fouresquare-types@npm:^0.0.3":
+  version: 0.0.3
+  resolution: "@suyama-daichi/fouresquare-types@npm:0.0.3::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40suyama-daichi%2Ffouresquare-types%2F0.0.3%2F106d332371375cdc8b0d7270d64669e00034b1984e5570ff43830fe3d45bc316"
+  checksum: 249d038012c6bb09c896e93c4de7f39af2cfdb2f55bc903de9821f1bc1350476d70449f05912ce5bd6ffd34fdbfa7697b8fc2cdf44e3b36a36bfbd22e7d62a6a
   languageName: node
   linkType: hard
 
@@ -5826,7 +5826,7 @@ __metadata:
     "@nestjs/schematics": ^8.0.0
     "@nestjs/testing": ^8.0.0
     "@prisma/client": ^3.15.2
-    "@suyama-daichi/fouresquare-types": ^0.0.2
+    "@suyama-daichi/fouresquare-types": ^0.0.3
     "@types/express": ^4.17.13
     "@types/jest": 27.5.0
     "@types/node": ^16.0.0

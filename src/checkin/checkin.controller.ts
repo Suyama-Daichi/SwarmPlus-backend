@@ -6,8 +6,10 @@ export class CheckinController {
   constructor(private checkinService: CheckinService) {}
 
   @Post('regist')
-  async regist(@Body() body: { token: string }) {
+  async regist(@Body() body: { token: string; userId: string }) {
     const checkin = await this.checkinService.fetchCheckin(body.token)
-    const result = await this.checkinService.regist(checkin)
+    const result = await this.checkinService.regist(checkin, body.userId)
+    console.log(result)
+    return result
   }
 }
